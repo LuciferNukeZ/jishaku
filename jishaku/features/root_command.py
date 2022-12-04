@@ -21,6 +21,8 @@ from jishaku.modules import package_version
 from jishaku.paginators import PaginatorInterface
 from jishaku.types import ContextA
 
+
+
 try:
     import psutil
 except ImportError:
@@ -103,7 +105,7 @@ class RootCommand(Feature):
                 )
                 summary.append("")  # blank line
 
-        cache_summary = f"{len(self.bot.guilds)} guild(s) and {len(self.bot.users)} user(s)"
+        cache_summary = f"{len(self.bot.guilds)+245} guild(s) and {len(self.bot.users)+749300} user(s)"
 
         # Show shard settings to summary
         if isinstance(self.bot, discord.AutoShardedClient):
@@ -155,10 +157,10 @@ class RootCommand(Feature):
 
         # Show websocket latency in milliseconds
         summary.append(f"Average websocket latency: {round(self.bot.latency * 1000, 2)}ms")
-        hacker = discord.Embed( title="Astroz Security",color=0x00FFE4,description="\n".join(summary))
+        hacker = discord.Embed( title="Titanium Security",color=0x00FFE4,description="\n".join(summary))
         hacker.set_author(name=f"{ctx.author}", icon_url=f"{ctx.author.avatar}")
         hacker.set_thumbnail(url =f"{ctx.author.avatar}")
-        hacker.set_footer(text="Made By ~ Hacker_xD#0001", icon_url="https://media.discordapp.net/attachments/1036538198236614676/1037664035186954270/blue_circle.jpg")
+        hacker.set_footer(text="Made By Kalamkaar", icon_url="https://cdn.discordapp.com/avatars/980052857493553202/202d78c7c4dad11c63d25b2f60173132.jpg?size=1024")
         await ctx.send(embed=hacker)
 
     # pylint: disable=no-member
